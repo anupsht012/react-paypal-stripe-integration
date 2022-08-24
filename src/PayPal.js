@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import './App.css';
 const PayPal = () => {
@@ -38,6 +38,15 @@ const PayPal = () => {
         setErrorMessage('Error aayo')
     }
 
+    useEffect(() => {
+        {success && (
+            alert('Payment Successful')
+        )}
+    }, [success])
+    
+console.log(1,orderId);
+console.log(2,success);
+console.log(3,errorMessage);
     return (
         <div className="App">
         <div className="">
@@ -50,7 +59,7 @@ const PayPal = () => {
                     onApprove={OnApprove}
                     onError={onError}
                     style={{
-                        layout: 'horizontal',
+                        layout: 'vertical',
                         color: 'blue',
                         shape: 'pill',
                         label: 'paypal'
@@ -59,9 +68,7 @@ const PayPal = () => {
                  : null}
 
                 </div>
-                {success && (
-                    alert('Payment Successful')
-                )}
+             
 
             </PayPalScriptProvider>
             </div>

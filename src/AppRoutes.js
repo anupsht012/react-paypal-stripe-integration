@@ -1,15 +1,17 @@
 import React from 'react'
-import { Route, Routes } from 'react-router'
 import Cancel from './Cancel'
 import PayPal from './PayPal'
-import { ROUTES } from './Routes'
+import { ROUTES } from './routes'
 import Stripes from './Stripes'
 import Success from './Success'
-
+import {Routes,Route} from 'react-router-dom';
 export const AppRoutes = () => {
     return (
-        <Routes>
 
+        <Routes>
+    {/* {ROUTES.map((route,key)=>{
+        <Route path={route.path} element={route.element}/>
+    })} */}
             <Route path="/" element={<PayPal />} exact={true} />
             <Route path="/paypal" element={<PayPal />} exact={true} />
             <Route path="/stripes" element={<Stripes />} exact={true} />
