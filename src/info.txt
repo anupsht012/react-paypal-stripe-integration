@@ -1,0 +1,10 @@
+create paypal acc at https://developer.paypal.com/
+username:ánup@texillence.com
+password:
+login https://www.sandbox.paypal.com/
+username:sb-ps3g318060703@business.example.com
+password:"$GyN8>L
+
+
+
+
